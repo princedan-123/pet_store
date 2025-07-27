@@ -4,7 +4,7 @@ from .models import User, Pet, Adoption, Client
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        exclude = ['is_staff', 'is_superuser']
+        exclude = ['is_staff', 'is_superuser', 'password']
 
 class ClientSerializer(serializers.ModelSerializer):
     class Meta:
